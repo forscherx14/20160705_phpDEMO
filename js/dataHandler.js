@@ -15,7 +15,7 @@ $(document).ready( function(){
 		dataSrc = "demoForm";
 		data = { dataSource : dataSrc, userInput: userInput };
 
-		$.post("backend.php", data ).done( function( serverResponse ){
+		$.post("api/", data ).done( function( serverResponse ){
 			console.log( serverResponse )
 			console.log( typeof( serverResponse ) )
 			myObj = JSON.parse( serverResponse);
@@ -36,7 +36,7 @@ $(document).ready( function(){
 	$("#ipBtn").click( function(){
 		data = { dataSource: "ip" };
 
-		$.post("backend.php", data ).done( function( serverResponse ){
+		$.post("api/", data ).done( function( serverResponse ){
 			console.log( serverResponse )
 			myData = JSON.parse(serverResponse )
 			console.log( myData )
@@ -48,7 +48,7 @@ $(document).ready( function(){
 	$("#browserBtn").click( function(){
 		data = { dataSource: "browser" };
 
-		$.post("backend.php", data ).done( function( serverResponse ){
+		$.post("api/", data ).done( function( serverResponse ){
 			console.log( serverResponse )
 			myData = JSON.parse(serverResponse )
 			console.log( myData )
